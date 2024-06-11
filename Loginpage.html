@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Login Side by Side</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-size: 80%;
+        }
+        .form-group{
+                border: 40px solid black;
+                margin-top: 35px;
+                margin-left: 50%;
+                width: 30%;
+                height: 50%;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+                overflow: hidden;
+                justify-content: right;
+                text-align: center;
+                
+            }
+            .btn{
+                color: black;
+                margin-left: 63%;
+
+            }
+            h2 {
+                padding-top: 20px;
+                margin-left: 63%;
+                font-weight:bold;
+                font-size: 40px;
+                color: black;
+                text-shadow: 2px 2px 2px rgba(231, 232, 224, 0.5);
+            }
+            .fa-solid{
+                font-size: 18px;
+                color: grey;
+            }
+            p{
+                padding-top: 25px;
+                margin-left: 64%;
+                font-weight:normal;
+                font-size: 20px;
+                color: black;
+                text-shadow: 2px 2px 2px rgba(231, 232, 224, 0.5);
+            }
+            .Register-link{
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: medium;
+                margin-right: 18%;
+            }
+.Register-link p a:hover {
+text-decoration: underline;
+}
+    </style>
+</head>
+<script>
+    function loginValidation(){
+        var email=document.myform.email.value;
+        var password=document.myform.password.value;
+        if(uname==null || uname==" "){
+            alert("mail cannot be blank")
+            return false;
+        }
+        else if(password.length<6){
+            alert("Password must be 6 letters")
+            return false;
+        }
+        return true
+    }
+</script>
+<body>
+    <form name="myform" action="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\login success.html" 
+    onsubmit="return loginValidation(this)">
+    <body background="cupcake-8676198_1280.jpg"></body>
+                    <h2>Login!</h2>
+                    <div class="form-group">
+                        <label for="email">Email address
+                            <i class="fa-sharp fa-solid fa-envelope-open"></i>
+                        </label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        <label for="password">Password
+                            <i class="fa-solid fa-lock"></i>
+                        </label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button><br>
+                    <p>OR</p>
+<div class="Register-link">
+    <p>Don't have an account? <a href="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\Reg page.html">Register here</a></p>
+</div>
+                    
+    </form>
+    </body>
+    </html>
+        

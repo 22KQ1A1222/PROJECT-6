@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reg page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-size: 100% 100% ;
+            margin-right: 70%;
+        }
+        .container {
+            background: wheat;
+            padding: 5px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 330px;
+            margin: 50px auto;
+            box-shadow: 0 0 15px rgba(17, 17, 17, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #d2691e;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 5px;
+        }
+        input, select, textarea {
+            width: 80%;
+            padding: 0px;
+            margin-top: 1px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #d2691e;
+            color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #c15515;
+        }
+        .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .checkbox-group input {
+            width: auto;
+        }
+        .fa-solid{
+            color: yellow;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\reg success.html">
+    <body background="biscuit-7623118_1280.jpg"></body>
+    <div class="container">
+        <h1>Frosting CakeHouse</h1>
+        <form id="registrationForm">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+            
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            
+            <label for="favoriteTreat">Favorite Type of Treat</label>
+            <select id="favoriteTreat" name="favoriteTreat" required>
+                <option value="cakes">Cakes</option>
+                <option value="cookies">Shakes</option>
+                <option value="pastries">Bevarages</option>
+                <option value="bread">Desserts</option>
+                <option value="chocolates">Icecreams</option>
+                <option value="cupcakes">Tarts</option>
+            </select>
+            <label for="favoriteFlavor">Favorite Flavor</label>
+            <input type="text" id="favoriteFlavor" name="favoriteFlavor" required>
+            <label for="dietaryPreferences">Dietary Preferences</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="dietaryPreferences" value="vegan"> Vegan</label>
+                <label><input type="checkbox" name="dietaryPreferences" value="glutenFree"> Gluten-Free</label>
+                <label><input type="checkbox" name="dietaryPreferences" value="sugarFree"> Sugar-Free</label>
+                <label><input type="checkbox" name="dietaryPreferences" value="nutFree"> Nut-Free</label>
+                <label><input type="checkbox" name="dietaryPreferences" value="noPreference"> No Preference</label>
+            </div>
+            
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday" required>
+            
+            <label for="favoriteMemory">Favorite Bakery Memory</label>
+            <textarea id="favoriteMemory" name="favoriteMemory" rows="4" required></textarea>
+            
+            <label for="howDidYouHear">How did you hear about us?</label>
+            <input type="text" id="howDidYouHear" name="howDidYouHear" required>
+            
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="newsletter" name="newsletter"> Subscribe to our newsletter</label>
+                <label><input type="checkbox" id="loyaltyProgram" name="loyaltyProgram"> Join our loyalty program</label>
+            </div>
+            
+            <label><input type="checkbox" id="terms" name="terms" required> I have read and agree to the <a href="#">Terms & Conditions</a></label>
+            
+            <button type="submit">Register 
+                <i class="fa-solid fa-face-smile"></i></button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const form = event.target;
+
+            // Simple password match validation
+            const password = form.password.value;
+            const confirmPassword = form.confirmPassword.value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            // Collect form data
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            // Display form data in console (or send to server)
+            console.log(data);
+
+            alert('Thank you for registering at Sweet Treats Bakery!');
+        });
+    </script>
+    </form>
+</body>
+</html>

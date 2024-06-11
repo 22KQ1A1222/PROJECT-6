@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+    background-color: #98bcdf;
+}
+.product-card {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+.product-card img {
+    transition: transform 0.3s ease;
+}
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+.product-card .card-body {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: white;
+    transition: background 0.5s ease;
+}
+
+.product-card:hover .card-body {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.quantity-input {
+    width: 60px;
+}
+
+.add-to-cart-btn {
+    position: relative;
+    overflow: hidden;
+}
+.add-to-cart-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+}
+.add-to-cart-btn:active::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+    </style>
+</head>
+<script>
+    $(document).ready(function(){
+        $('.add-to-cart-btn').on('click', function() {
+            $(this).addClass('clicked');
+            setTimeout(() => {
+                $(this).removeClass('clicked');
+            }, 300);
+        });
+    });
+    </script>
+<body>
+    <form action="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\Loginpage.html">
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Basket Page</h1>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow product-card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="wedding-cake-5593403_1280.jpg" class="card-img" alt="Product Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Sunflower Cake</h5>
+                                <p class="card-text">It is amazing and you should definitely buy it!</p>
+                                <p class="card-text">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i><strong>1500</strong></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <input type="number" class="form-control quantity-input" value="1">
+                                    <button class="btn btn-primary add-to-cart-btn">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow product-card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="valentine-3925931_1280.jpg" class="card-img" alt="Product Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Valentine Cake</h5>
+                                <p class="card-text">It is amazing and you should definitely buy it!</p>
+                                <p class="card-text">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i><strong>800</strong></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <input type="number" class="form-control quantity-input" value="1">
+                                    <button class="btn btn-primary add-to-cart-btn">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow product-card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="cream-3177906_1280.jpg" class="card-img" alt="Product Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Swiss Cake</h5>
+                                <p class="card-text"> It is amazing and you should definitely buy it!</p>
+                                <p class="card-text">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i><strong>60</strong></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <input type="number" class="form-control quantity-input" value="1">
+                                    <button class="btn btn-primary add-to-cart-btn">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</form>
+</body>
+</html>

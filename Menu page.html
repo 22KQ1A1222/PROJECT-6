@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    background-color: #f1b1f7;
+    background-attachment: fixed;
+    color: #b20ff3;
+}
+.container {
+    text-align: center;
+    padding: 50px 20px;
+    background: whitesmoke;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(219, 215, 215, 0.3);
+}
+header h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #0cbbf1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.filter {
+    margin-bottom: 30px;
+}
+.filter button {
+    background-color: #e2eff3;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: rgb(239, 122, 196);
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.filter button:hover {
+    background-color: #f1b1f7;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menu-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+.menu-item:hover {
+    transform: scale(1.05);
+}
+.menu-item img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+.menu-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: rgba();
+}
+.menu-item p {
+    font-size: 1.2em;
+    color: #ff6347;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Frosting CakeHouse</h1>
+            <div class="filter">
+                <button onclick="filterMenu('all')">All</button>
+                <button onclick="filterMenu('Wedding')">Wedding cakes</button>
+                <button onclick="filterMenu('Birthday')">Birthday Cakes</button>
+                <button onclick="filterMenu('dessert')">Desserts</button>
+                <button onclick="filterMenu('beverage')">Beverages</button>
+                <button onclick="filterMenu('Shakes')">Milkshakes</button>
+                <button onclick="filterMenu('tarts')">Tarts</button>
+            </div>
+        </header>
+        <section class="menu" id="menu">
+            <!-- wedding cake -->
+            <div class="menu-item Wedding">
+                <img src="ai-generated-8110986_1280.png">
+                <a class="menu" href="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\Wedding Cakes.html">click here</a>
+                <h2>Wedding Cakes</h2>
+                <i class="fa-solid fa-indian-rupee-sign"></i>2000-10000
+            </div>
+                        <!-- Birthday cake -->
+            <div class="menu-item Birthday">
+                <img src="birthday-cake-264605_1280.jpg">
+                <a class="menu" href="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\Birthday cakes.html">click here</a>
+                <h2>Birthday cakes</h2>
+                <i class="fa-solid fa-indian-rupee-sign"></i>500-1000
+            </div>
+                        <!-- Tarts -->
+            <div class="menu-item tarts">
+                <img src="apple-tart-2854864_1280.jpg">
+                <a class="menu" href="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\Tarts.html">click here</a>
+                <h2>Tarts</h2>
+                around<i class="fa-solid fa-indian-rupee-sign"></i>500
+            </div>
+                        <!-- Icecreams  -->
+            <div class="menu-item icecream">
+                <img src="ice-cream-6002667_1280.jpg">
+                <a class="menu" href="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\Icecreams.html">click here</a>
+                <h2>Icecreams</h2>
+                around<i class="fa-solid fa-indian-rupee-sign"></i>500
+            </div>
+            <!-- Desserts -->
+            <div class="menu-item dessert">
+                <img src="dessert-5582984_1280.jpg">
+                <a class="menu" href="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\Desserts.html">click here</a>
+                <h2>Desserts</h2>
+                around <i class="fa-solid fa-indian-rupee-sign"></i>1000
+            </div>
+            <!-- Beverages -->
+            <div class="menu-item beverage">
+                <img src="juice-5191678_1280.jpg">
+                <a class="menu" href="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\Bevarages.html">click here</a>
+                <h2>Beverages</h2>
+                around <i class="fa-solid fa-indian-rupee-sign"></i>300
+            </div>
+                        <!-- Milkshakes  -->
+            <div class="menu-item MilkShakes">
+                <img src="smoothie-2538950_1280.jpg">
+                <a class="menu" href="C:\Users\vinee\OneDrive\Desktop\PROJECTS\Project 6\MilkShakes.html">click here</a>
+                <h2>MilkShakes</h2>
+                around <i class="fa-solid fa-indian-rupee-sign"></i>400
+            </div>
+        </section>
+    </div>
+</body>
+</html>

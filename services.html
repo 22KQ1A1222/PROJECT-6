@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Services</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 50px;
+            background-size: 1600px;
+        }
+        .services-section {
+            padding: 60px 0;
+        }
+        .service-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+        .service-icon {
+            font-size: 50px;
+            color: #d63384;
+        }
+        .service-title {
+            margin-top: 50px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .service-description {
+            margin-top: 30px;
+            font-size: 16px;
+            color: #666;
+        }
+        .fa-solid{
+            font-size: 50px;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+<body background="baklava-with-pistachios-4183180_1280.jpg"></body>
+<div class="container services-section">
+    <div class="text-center">
+        <h2>Our Bakery Services</h2>
+        <p>We offer a variety of bakery services to delight your taste buds</p>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="service-box" onclick="showServiceDetails('Custom Cakes')">
+                <div class="service-icon">
+                    <i class="fas fa-birthday-cake"></i>
+                </div>
+                <div class="service-title">Custom Cakes</div>
+                <div class="service-description">Delicious and beautifully decorated cakes for any occasion</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-box" onclick="showServiceDetails('Pastries & Desserts')">
+                <div class="service-icon">
+                    <i class="fas fa-cookie-bite"></i>
+                </div>
+                <div class="service-title">Pastries & Desserts</div>
+                <div class="service-description">A wide range of pastries, cookies, and desserts</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-box" onclick="showServiceDetails('Bread & Rolls')">
+                <div class="service-icon">
+                    <i class="fa-solid fa-lemon"></i></i>
+                </div>
+                <div class="service-title">Tarts & Shakes</div>
+                <div class="service-description">Freshly made juices and tarts made daily</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service Details Modal -->
+<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="serviceModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="serviceModalLabel">Service Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="serviceDetails"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function showServiceDetails(serviceName) {
+        let serviceDetails = "";
+        switch(serviceName) {
+            case "Custom Cakes":
+                serviceDetails = "We create custom cakes for any occasion, including birthdays, weddings, and anniversaries. Our cakes are not only delicious but also beautifully decorated to suit your needs.";
+                break;
+            case "Pastries & Desserts":
+                serviceDetails = "Our bakery offers a wide variety of pastries and desserts, including cookies, muffins, tarts, and more. Each item is baked fresh daily using the finest ingredients.";
+                break;
+            case "Bread & Rolls":
+                serviceDetails = "Enjoy our selection of freshly baked bread and rolls. From classic baguettes to soft dinner rolls, we have something to complement any meal.";
+                break;
+            default:
+                serviceDetails = "Details not available.";
+        }
+        $('#serviceDetails').text(serviceDetails);
+        $('#serviceModal').modal('show');
+    }
+</script>
+
+</body>
+</html>

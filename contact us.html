@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 50px;
+            background-size: 100% 100%;
+        }
+        .contact-form {
+            background: #transparent;
+            margin-bottom: 10%;
+            margin-right: 10%;
+            width: 30%;
+        }
+        .contact-form .form-control {
+            border-radius: 1rem;
+        }
+        .contact-form form {
+            padding: 14%;
+        }
+        .contact-form .btnContact {
+            border: none;
+            border-radius: 1rem;
+            padding: 1.5%;
+            width: 40%;
+            cursor: pointer;
+            background: #0062cc;
+            color: #fff;
+        }
+        .contact-form .btnContactSubmit {
+            border: none;
+            border-radius: 1rem;
+            padding: 1.5%;
+            width: 50%;
+            cursor: pointer;
+            background: #28a745;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<body background="envelope-8809765_1280.jpg"></body>
+<div class="container contact-form">
+    <form id="contactForm">
+        <h3>Drop Us a Message</h3>
+        <div class="form-group">
+            <i class="fa-solid fa-user"></i><input type="text" name="name" class="form-control" placeholder="Your Name *" value="" />
+        </div>
+        <div class="form-group">
+            <i class="fa-solid fa-envelope"></i><input type="email" name="email" class="form-control" placeholder="Your Email *" value="" />
+        </div>
+        <div class="form-group">
+            <i class="fa-solid fa-phone"></i><input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" />
+        </div>
+        <div class="form-group">
+            <i class="fa-solid fa-comment"></i><textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+        </div>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#contactForm').on('submit', function(event) {
+            event.preventDefault();
+            var valid = true;
+
+            var name = $('input[name="name"]').val();
+            var email = $('input[name="email"]').val();
+            var phone = $('input[name="phone"]').val();
+            var message = $('textarea[name="message"]').val();
+
+            if (name === '') {
+                valid = false;
+                alert("Name is required");
+            } else if (email === '') {
+                valid = false;
+                alert("Email is required");
+            } else if (phone === '') {
+                valid = false;
+                alert("Phone number is required");
+            } else if (message === '') {
+                valid = false;
+                alert("Message is required");
+            } else if (!validateEmail(email)) {
+                valid = false;
+                alert("Invalid email format");
+            }
+
+            if (valid) {
+                // Form can be submitted to the server here
+                alert("Form submitted successfully");
+                // Uncomment the line below to submit the form
+                // this.submit();
+            }
+        });
+
+        function validateEmail(email) {
+            var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(email);
+        }
+    });
+</script>
+
+</body>
+</html>
